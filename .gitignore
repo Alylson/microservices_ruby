@@ -1,0 +1,20 @@
+# Ignorar pastas dos microserviços
+/authentication_service/
+/task_service/
+/scraping_service/
+/notification_service/
+
+# Ignorar dependências do Ruby
+*.gem
+*.bundle
+
+# Ignorar arquivos de configuração local do Ruby
+/.ruby-version
+/.ruby-gemset
+
+# Ignorar diretórios de log
+/log/*
+!/log/.keep
+
+# Ignorar arquivos temporários
+/tmp/
