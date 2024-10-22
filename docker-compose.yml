@@ -9,6 +9,8 @@ services:
       - DATABASE_USERNAME=root
       - DATABASE_PASSWORD=c2spassword
       - DATABASE_NAME=auth_database
+    volumes:
+      - ./authentication_service:/app
     ports:
       - "3000:3000"
     networks:
@@ -24,6 +26,8 @@ services:
       - DATABASE_USERNAME=root
       - DATABASE_PASSWORD=c2spassword
       - DATABASE_NAME=task_database
+    volumes:
+      - ./task_service:/app
     ports:
       - "3001:3000"
     networks:
@@ -39,6 +43,8 @@ services:
       - DATABASE_USERNAME=root
       - DATABASE_PASSWORD=c2spassword
       - DATABASE_NAME=scraping_database
+    volumes:
+      - ./scraping_service:/app
     ports:
       - "3002:3000"
     networks:
@@ -54,6 +60,8 @@ services:
       - DATABASE_USERNAME=root
       - DATABASE_PASSWORD=c2spassword
       - DATABASE_NAME=notification_database
+    volumes:
+      - ./notification_service:/app
     ports:
       - "3003:3000"
     networks:
@@ -65,7 +73,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: c2spassword
     volumes:
-      - ./mysql_data:/var/lib/mysql
+      #- ./mysql_data:/var/lib/mysql
       - ./mysql-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
