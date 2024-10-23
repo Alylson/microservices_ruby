@@ -1,4 +1,0 @@
-CREATE DATABASE IF NOT EXISTS auth_database;
-CREATE DATABASE IF NOT EXISTS task_database;
-CREATE DATABASE IF NOT EXISTS scraping_database;
-CREATE DATABASE IF NOT EXISTS notification_database;

@@ -73,7 +73,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: c2spassword
     volumes:
-      #- ./mysql_data:/var/lib/mysql
       - ./mysql-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
